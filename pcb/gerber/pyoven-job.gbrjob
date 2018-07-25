@@ -1,31 +1,110 @@
-G04 Gerber job file with board parameters*
-%TF.FileFunction,JobInfo*%
-%TF.Part,SinglePCB*%
-G04 Single PCB fabrication instructions*
-%TF.GenerationSoftware,KiCad,Pcbnew,(2018-01-05 revision b98cc0b)-master*%
-%TF.CreationDate,2018-01-06T14:23:44-08:00*%
-%TF.ProjectId,pyoven,70796F76656E2E6B696361645F706362,rev?*%
-%MOMM*%
-G04 Overall board parameters*
-%TJ.B_Size_X,160.150*%
-%TJ.B_Size_Y,57.150*%
-%TJ.B_LayerNum,2*%
-%TJ.B_Overall_Thickness,1.600*%
-%TJ.B_Legend_Present,Both*%
-%TJ.B_SolderMask_Present,Both*%
-G04 board design rules*
-%TJ.D_PadToPad_Out,0.152*%
-%TJ.D_PadToTrack_Out,0.152*%
-%TJ.D_TrackToTrack_Out,0.152*%
-%TJ.D_MinLineWidth_Out,0.203*%
-%TJ.D_TrackToRegion_Out,0.508*%
-%TJ.D_RegionToRegion_Out,0.508*%
-G04 Layer Structure*
-%TJ.L_"Copper,L1,Top",Positive,pyoven-F.Cu.gtl*%
-%TJ.L_"Copper,L2,Bot",Positive,pyoven-B.Cu.gbl*%
-%TJ.L_"Legend,Bot",Positive,pyoven-B.SilkS.gbo*%
-%TJ.L_"Legend,Top",Positive,pyoven-F.SilkS.gto*%
-%TJ.L_"SolderMask,Bot",Negative,pyoven-B.Mask.gbs*%
-%TJ.L_"SolderMask,Top",Negative,pyoven-F.Mask.gts*%
-%TJ.L_"Profile",Positive,pyoven-Edge.Cuts.gm1*%
-M02*
+{
+  "Header":
+  {
+    "GenerationSoftware":
+    {
+      "Vendor":      "KiCad",
+      "Application": "Pcbnew",
+      "Version":     "(5.0.0-3-g5ebb6b6)"
+    },
+    "CreationDate":  "2018-07-24T23:49:47-07:00"
+  },
+  "GeneralSpecs":
+  {
+    "ProjectId":
+    {
+      "Name": "pyoven",
+      "GUID": "70796F76656E2E6B696361645F706362",
+      "Revision": "rev?"
+    },
+    "Size":
+    {
+      "X": 160.150,
+      "Y": 57.150
+    },
+    "LayerNumber": 2,
+    "BoardThickness":  1.600
+  },
+  "DesignRules":
+  [
+    {
+      "Layers": "Outer",
+      "PadToPad":  0.152,
+      "PadToTrack":  0.152,
+      "TrackToTrack":  0.152,
+      "MinLineWidth":  0.203,
+      "TrackToRegion":  0.508,
+      "RegionToRegion":  0.508
+    }
+  ],
+  "FilesAttributes":
+  [
+    {
+      "Path":  "pyoven-F.Cu.gtl",
+      "FileFunction":  "Copper,L1,Top",
+      "FilePolarity":  "Positive"
+    },
+    {
+      "Path":  "pyoven-B.Cu.gbl",
+      "FileFunction":  "Copper,L2,Bot",
+      "FilePolarity":  "Positive"
+    },
+    {
+      "Path":  "pyoven-F.SilkS.gto",
+      "FileFunction":  "Legend,Top",
+      "FilePolarity":  "Positive"
+    },
+    {
+      "Path":  "pyoven-B.SilkS.gbo",
+      "FileFunction":  "Legend,Bot",
+      "FilePolarity":  "Positive"
+    },
+    {
+      "Path":  "pyoven-F.Mask.gts",
+      "FileFunction":  "SolderMask,Top",
+      "FilePolarity":  "Negative"
+    },
+    {
+      "Path":  "pyoven-B.Mask.gbs",
+      "FileFunction":  "SolderMask,Bot",
+      "FilePolarity":  "Negative"
+    },
+    {
+      "Path":  "pyoven-Edge.Cuts.gm1",
+      "FileFunction":  "Profile",
+      "FilePolarity":  "Positive"
+    }
+  ],
+  "MaterialStackup":
+  [
+    {
+      "Type":  "Legend",
+      "Notes":  "Layer F.SilkS"
+    },
+    {
+      "Type":  "SolderMask",
+      "Notes":  "Layer F.Mask"
+    },
+    {
+      "Type":  "Copper",
+      "Notes":  "Layer F.Cu"
+    },
+    {
+      "Type":  "Dielectric",
+      "Material":  "FR4",
+      "Notes":  "Layers L1/L2"
+    },
+    {
+      "Type":  "Copper",
+      "Notes":  "Layer B.Cu"
+    },
+    {
+      "Type":  "SolderMask",
+      "Notes":  "Layer B.Mask"
+    },
+    {
+      "Type":  "Legend",
+      "Notes":  "Layer B.SilkS"
+    }
+  ]
+}
